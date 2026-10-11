@@ -1,17 +1,13 @@
-# bookia_app
+📚 Bookia — Book Store App
 
-A new Flutter project.
+A Flutter application for a modern book store, designed to provide a clean and user-friendly experience for browsing and discovering books.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 App Screens
+<p align="center">
+  <img src="screenshot/splash.png" width="200">
+  <img src="screenshot/onboarding.png" width="200">
+  <img src="screenshot/login.png" width="200">
+  <img src="screenshot/register.png" width="200">
+  
+  
+</p>

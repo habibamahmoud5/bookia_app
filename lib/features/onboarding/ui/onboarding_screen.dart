@@ -40,7 +40,7 @@ class OnboardingScreen extends StatelessWidget {
                 foregroundColor: AppColors.black,
                 backgroundColor: AppColors.white,
                 onPressed: () {
-                  Navigator.pushNamed(context, AppRoutes.loginScreen);
+                  Navigator.pushNamed(context, AppRoutes.registerScreen);
                 },
               ),
             ],
