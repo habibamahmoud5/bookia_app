@@ -8,5 +8,10 @@ A Flutter application for a modern book store, designed to provide a clean and u
   <img src="screenshot/onboarding.png" width="200">
   <img src="screenshot/login.png" width="200">
   <img src="screenshot/register.png" width="200">
+  <img src="screenshot/Home.png" width="200">
+  <img src="screenshot/search1.png" width="200">
+  <img src="screenshot/search2.png" width="200">
   
 </p>
+```bash
+dart run build_runner build --delete-conflicting-outputs

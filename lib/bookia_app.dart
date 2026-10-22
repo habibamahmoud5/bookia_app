@@ -1,5 +1,7 @@
 import 'package:bookia_app/core/routes/app_router.dart';
 import 'package:bookia_app/core/routes/app_routes.dart';
+import 'package:bookia_app/core/services/locale/local_helper.dart';
+import 'package:bookia_app/core/utils/app_const.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,9 +24,17 @@ class BookiaApp extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xFFF7F8F9),
           fontFamily: 'Dm',
         ),
-        initialRoute: AppRoutes.onbordingScreen,
+        initialRoute: intiPage(),
         onGenerateRoute: AppRouter.onGenerateRoute,
       ),
     );
+  }
+
+  String intiPage() {
+    if (LocalHelper.prefs?.getString(AppConst.userToken) != null) {
+      return AppRoutes.homeScreen;
+    } else {
+      return AppRoutes.onbordingScreen;
+    }
   }
 }

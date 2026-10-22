@@ -21,4 +21,12 @@ class AppTextStyles {
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle dmRegular24 = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle dmRegular18 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w400,
+  );
 }

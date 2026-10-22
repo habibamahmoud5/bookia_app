@@ -9,7 +9,8 @@ class CustomTextField extends StatefulWidget {
   final bool showValidation;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
-
+  final bool? autofocus;
+  final void Function(String?)? onchange;
   const CustomTextField({
     super.key,
     required this.hintText,
@@ -18,6 +19,8 @@ class CustomTextField extends StatefulWidget {
     this.showValidation = false,
     this.controller,
     this.keyboardType,
+    this.autofocus,
+    this.onchange,
   });
 
   @override
@@ -30,6 +33,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: widget.onchange,
+      autofocus: widget.autofocus ?? false,
       controller: widget.controller,
       keyboardType: widget.keyboardType,
       obscureText: widget.obscureText && !isPasswordVisible,

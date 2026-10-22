@@ -11,39 +11,45 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: Image.asset('assets/image/onboarding.png').image,
+      resizeToAvoidBottomInset: false,
+      body: GestureDetector(
+        onTap: () {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: Image.asset('assets/image/onboarding.png').image,
+            ),
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 22),
-          child: Column(
-            children: [
-              135.verticalSpace,
-              OnboardingHeader(),
-              330.verticalSpace,
-              OnboardingButton(
-                text: 'Login',
-                foregroundColor: AppColors.white,
-                backgroundColor: AppColors.gold,
-                onPressed: () {
-                  Navigator.pushNamed(context, AppRoutes.loginScreen);
-                },
-              ),
-              15.verticalSpace,
-              OnboardingButton(
-                text: 'Register',
-                foregroundColor: AppColors.black,
-                backgroundColor: AppColors.white,
-                onPressed: () {
-                  Navigator.pushNamed(context, AppRoutes.registerScreen);
-                },
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 22),
+            child: Column(
+              children: [
+                135.verticalSpace,
+                OnboardingHeader(),
+                330.verticalSpace,
+                OnboardingButton(
+                  text: 'Login',
+                  foregroundColor: AppColors.white,
+                  backgroundColor: AppColors.gold,
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoutes.loginScreen);
+                  },
+                ),
+                15.verticalSpace,
+                OnboardingButton(
+                  text: 'Register',
+                  foregroundColor: AppColors.black,
+                  backgroundColor: AppColors.white,
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoutes.registerScreen);
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
