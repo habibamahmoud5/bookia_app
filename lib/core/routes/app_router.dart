@@ -3,6 +3,7 @@ import 'package:bookia_app/features/auth/cubit/cubit/auth_cubit.dart';
 import 'package:bookia_app/features/auth/repo/auth_repo.dart';
 import 'package:bookia_app/features/auth/ui/login_screen.dart';
 import 'package:bookia_app/features/auth/ui/register_screen.dart';
+import 'package:bookia_app/features/button_nav_bar/presentation/bottom_nave_bar_screen.dart';
 import 'package:bookia_app/features/home/presentation/cubit/home_cubit.dart';
 import 'package:bookia_app/features/home/presentation/ui/home_screen.dart';
 import 'package:bookia_app/features/home/presentation/ui/search_screen.dart';
@@ -31,6 +32,8 @@ class AppRouter {
             child: RegisterScreen(),
           ),
         );
+      case AppRoutes.bottumNavScreen:
+        return MaterialPageRoute(builder: (_) => BottomNaveBarScreen());
 
       case AppRoutes.homeScreen:
         return MaterialPageRoute(
