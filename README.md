@@ -8,7 +8,7 @@ A Flutter application for a modern book store, designed to provide a clean and u
   <img src="screenshot/onboarding.png" width="200">
   <img src="screenshot/login.png" width="200">
   <img src="screenshot/register.png" width="200">
-  <img src="screenshot/Screenshot_1792921556.png" width="200">
+  <img src="screenshot/home.png" width="200">
   <img src="screenshot/search1.png" width="200">
   <img src="screenshot/search2.png" width="200">
   <img src="screenshot/profile.png" width="200">

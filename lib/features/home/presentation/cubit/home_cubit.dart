@@ -21,6 +21,7 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:bookia_app/features/home/models/books_model.dart';
+import 'package:bookia_app/features/home/models/slider_model.dart';
 import 'package:bookia_app/features/home/repo/home_repo.dart';
 import 'package:meta/meta.dart';
 
@@ -28,7 +29,7 @@ part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
-
+  SliderModels? sliderModels;
   Future<void> getBestSellerBooks() async {
     print('HOME: Started loading books');
 
@@ -71,6 +72,28 @@ class HomeCubit extends Cubit<HomeState> {
       print('SEARCH ERROR: $e');
       print(stackTrace);
       emit(SearchError());
+    }
+  }
+
+  Future<void> getSliders() async {
+    emit(GetSlidersLoading());
+
+    try {
+      final response = await HomeRepo.getSliders();
+
+      if (response != null && response.data?.sliders != null) {
+        sliderModels = response;
+
+        print('SLIDERS COUNT: ${sliderModels!.data!.sliders!.length}');
+
+        emit(GetSlidersSuccess(response));
+      } else {
+        emit(GetSlidersError());
+      }
+    } catch (e, stackTrace) {
+      print('SLIDERS ERROR: $e');
+      print(stackTrace);
+      emit(GetSlidersError());
     }
   }
 }

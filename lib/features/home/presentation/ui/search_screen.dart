@@ -28,7 +28,6 @@ class SearchScreen extends StatelessWidget {
                 children: [
                   20.verticalSpace,
 
-                  // Search Header
                   Row(
                     children: [
                       Container(
@@ -64,7 +63,6 @@ class SearchScreen extends StatelessWidget {
 
                   20.verticalSpace,
 
-                  // Search Results
                   Expanded(
                     child: BlocBuilder<HomeCubit, HomeState>(
                       builder: (context, state) {
