@@ -8,8 +8,9 @@ import 'package:bookia_app/features/auth/ui/widgets/auth_header.dart';
 import 'package:bookia_app/features/auth/ui/widgets/authfooter.dart';
 import 'package:bookia_app/features/auth/ui/widgets/custom_text_field.dart';
 import 'package:bookia_app/features/auth/ui/widgets/social_auth_button.dart';
+import 'package:bookia_app/features/button_nav_bar/presentation/bottom_nave_bar_screen.dart';
 import 'package:bookia_app/features/home/presentation/ui/home_screen.dart';
-import 'package:bookia_app/features/onboarding/ui/widgets/onboarding_button.dart';
+import 'package:bookia_app/features/onboarding/presentation/ui/widgets/onboarding_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,7 +36,7 @@ class LoginScreen extends StatelessWidget {
 
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (_) => const HomeScreen()),
+            MaterialPageRoute(builder: (_) => BottomNaveBarScreen()),
           );
         } else if (state is AuthError) {
           Navigator.of(context, rootNavigator: true).pop();

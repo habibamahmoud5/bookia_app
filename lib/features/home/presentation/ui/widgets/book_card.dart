@@ -1,6 +1,6 @@
 import 'package:bookia_app/core/theme/app_colors.dart';
 import 'package:bookia_app/core/theme/app_text_style.dart';
-import 'package:bookia_app/features/home/models/books_model.dart';
+import 'package:bookia_app/features/home/data/models/books_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

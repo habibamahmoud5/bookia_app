@@ -1,6 +1,7 @@
 import 'package:bookia_app/core/theme/app_colors.dart';
 import 'package:bookia_app/features/home/presentation/cubit/home_cubit.dart';
 import 'package:bookia_app/features/home/presentation/ui/home_screen.dart';
+import 'package:bookia_app/features/profile/presentation/cubit/profile_cubit.dart';
 import 'package:bookia_app/features/profile/presentation/ui/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,7 +31,10 @@ class _BottomNaveBarScreenState extends State<BottomNaveBarScreen> {
       create: (context) => HomeCubit()..getBestSellerBooks(),
       child: HomeScreen(),
     ),
-    ProfileScreen(),
+    BlocProvider(
+      create: (context) => ProfileCubit()..getProfileData(),
+      child: ProfileScreen(),
+    ),
   ];
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:bookia_app/core/routes/app_routes.dart';
 import 'package:bookia_app/core/theme/app_colors.dart';
-import 'package:bookia_app/features/onboarding/ui/widgets/onboarding_button.dart';
-import 'package:bookia_app/features/onboarding/ui/widgets/onboarding_header.dart';
+import 'package:bookia_app/features/onboarding/presentation/ui/widgets/onboarding_button.dart';
+import 'package:bookia_app/features/onboarding/presentation/ui/widgets/onboarding_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

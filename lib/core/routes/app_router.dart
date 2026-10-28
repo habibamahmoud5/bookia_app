@@ -7,7 +7,7 @@ import 'package:bookia_app/features/button_nav_bar/presentation/bottom_nave_bar_
 import 'package:bookia_app/features/home/presentation/cubit/home_cubit.dart';
 import 'package:bookia_app/features/home/presentation/ui/home_screen.dart';
 import 'package:bookia_app/features/home/presentation/ui/search_screen.dart';
-import 'package:bookia_app/features/onboarding/ui/onboarding_screen.dart';
+import 'package:bookia_app/features/onboarding/presentation/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

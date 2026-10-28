@@ -41,3 +41,21 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 }
+
+/*
+{
+    "data": {
+        "id": 978,
+        "name": "Ahmed Abdelsattar",
+        "email": "ahmedabdelsattar@gmail.com",
+        "address": null,
+        "city": null,
+        "phone": null,
+        "email_verified": true,
+        "image": "https://codingarabic.eraapro.com/admin/assets/img/default/user.jpg"
+    },
+    "message": "",
+    "error": [],
+    "status": 200
+}
+*/

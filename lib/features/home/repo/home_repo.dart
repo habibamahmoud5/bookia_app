@@ -1,7 +1,7 @@
 import 'package:bookia_app/core/networking/api_endpoints.dart';
 import 'package:bookia_app/core/networking/dio_factory.dart';
-import 'package:bookia_app/features/home/models/books_model.dart';
-import 'package:bookia_app/features/home/models/slider_model.dart';
+import 'package:bookia_app/features/home/data/models/books_model.dart';
+import 'package:bookia_app/features/home/data/models/slider_model.dart';
 
 class HomeRepo {
   static Future<BooksModel?>? getBestSellerBooks() async {

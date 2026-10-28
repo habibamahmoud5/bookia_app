@@ -20,8 +20,8 @@
 // }
 
 import 'package:bloc/bloc.dart';
-import 'package:bookia_app/features/home/models/books_model.dart';
-import 'package:bookia_app/features/home/models/slider_model.dart';
+import 'package:bookia_app/features/home/data/models/books_model.dart';
+import 'package:bookia_app/features/home/data/models/slider_model.dart';
 import 'package:bookia_app/features/home/repo/home_repo.dart';
 import 'package:meta/meta.dart';
 
