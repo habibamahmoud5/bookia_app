@@ -1,5 +1,5 @@
 import 'package:bookia_app/core/theme/app_colors.dart';
-import 'package:bookia_app/features/auth/ui/widgets/custom_text_field.dart';
+import 'package:bookia_app/features/auth/presentation/ui/widgets/custom_text_field.dart';
 import 'package:bookia_app/features/home/data/models/books_model.dart';
 import 'package:bookia_app/features/home/presentation/cubit/home_cubit.dart';
 import 'package:bookia_app/features/home/presentation/ui/widgets/book_card.dart';
@@ -86,6 +86,7 @@ class SearchScreen extends StatelessWidget {
                                     image:
                                         'https://i.pinimg.com/1200x/53/d6/93/53d69362d28551bcaf218d064224c474.jpg',
                                   ),
+                                  isFavorite: false,
                                 );
                               },
                             ),
@@ -109,7 +110,10 @@ class SearchScreen extends StatelessWidget {
                                   crossAxisSpacing: 12.w,
                                 ),
                             itemBuilder: (context, index) {
-                              return BookCard(product: products[index]);
+                              return BookCard(
+                                product: products[index],
+                                isFavorite: false,
+                              );
                             },
                           );
                         }

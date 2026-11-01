@@ -15,4 +15,4 @@ A Flutter application for a modern book store, designed to provide a clean and u
   
 </p>
 ```bash
-dart run build_runner build --delete-conflicting-outputs
+dart run build_runner build --delete-conflicting-outputs 

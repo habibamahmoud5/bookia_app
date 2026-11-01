@@ -1,9 +1,9 @@
 import 'package:bookia_app/core/theme/app_colors.dart';
 import 'package:bookia_app/features/auth/cubit/cubit/auth_cubit.dart';
-import 'package:bookia_app/features/auth/ui/login_screen.dart';
-import 'package:bookia_app/features/auth/ui/widgets/auth_header.dart';
-import 'package:bookia_app/features/auth/ui/widgets/authfooter.dart';
-import 'package:bookia_app/features/auth/ui/widgets/custom_text_field.dart';
+import 'package:bookia_app/features/auth/presentation/ui/login_screen.dart';
+import 'package:bookia_app/features/auth/presentation/ui/widgets/auth_header.dart';
+import 'package:bookia_app/features/auth/presentation/ui/widgets/authfooter.dart';
+import 'package:bookia_app/features/auth/presentation/ui/widgets/custom_text_field.dart';
 import 'package:bookia_app/features/home/presentation/ui/home_screen.dart';
 import 'package:bookia_app/features/onboarding/presentation/ui/widgets/onboarding_button.dart';
 import 'package:flutter/material.dart';
