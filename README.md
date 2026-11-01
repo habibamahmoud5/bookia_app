@@ -12,6 +12,9 @@ A Flutter application for a modern book store, designed to provide a clean and u
   <img src="screenshot/search1.png" width="200">
   <img src="screenshot/search2.png" width="200">
   <img src="screenshot/profile.png" width="200">
+  <img src="screenshot/Screenshot_1793543314.png" width="200">
+  <img src="screenshot/Screenshot_1793543316.png" width="200">
+  
   
 </p>
 ```bash
