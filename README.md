@@ -68,37 +68,9 @@ A modern **Flutter Book Store Application** that provides a smooth and user-frie
   <img src="screenshot/profile.png" width="200" alt="Profile Screen"/>
 </p>
 
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
+</p>
 ```bash
-git clone https://github.com/habibamahmoud5/bookia_app.git
-```
-
-### 2. Navigate to the Project
-
-```bash
-cd bookia_app
-```
-
-### 3. Install Dependencies
-
-```bash
-flutter pub get
-```
-
-### 4. Generate Required Files
-
-```bash
-dart run build_runner build --delete-conflicting-outputs
-```
-
-### 5. Run the Application
-
-```bash
-flutter run
-```
+dart run build_runner build --delete-conflicting-outputs 
 
 ## 👩‍💻 Developer
 
