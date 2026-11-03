@@ -1,21 +1,113 @@
-📚 Bookia — Book Store App
+# 📚 Bookia – Book Store App
 
-A Flutter application for a modern book store, designed to provide a clean and user-friendly experience for browsing and discovering books.
+A modern **Flutter Book Store Application** that provides a smooth and user-friendly experience for browsing books, discovering bestsellers, managing favorites, and shopping online.
+
+## ✨ Features
+
+- 🔐 User Authentication (Login & Register)
+- 🚀 Splash Screen & Onboarding
+- 📚 Browse Books & Best Sellers
+- 🔎 Search for Books
+- 📖 Book Details
+- 🛒 Add Books to Cart
+- ❤️ Manage Wishlist
+- 👤 User Profile
+- 🌐 REST API Integration
+- 🎨 Clean and Responsive UI
+
+## 🛠️ Technologies & Tools
+
+- **Flutter & Dart**
+- **flutter_bloc** – State Management
+- **Dio** – API Integration
+- **Flutter ScreenUtil** – Responsive UI
+- **REST API**
+- **Git & GitHub**
 
 ## 📱 App Screens
+
+### Splash & Onboarding
+
 <p align="center">
-  <img src="screenshot/splash.png" width="200">
-  <img src="screenshot/onboarding.png" width="200">
-  <img src="screenshot/login.png" width="200">
-  <img src="screenshot/register.png" width="200">
-  <img src="screenshot/Screenshot_1792946417.png" width="200">
-  <img src="screenshot/search1.png" width="200">
-  <img src="screenshot/search2.png" width="200">
-  <img src="screenshot/profile.png" width="200">
-  <img src="screenshot/Screenshot_1793543314.png" width="200">
-  <img src="screenshot/Screenshot_1793543316.png" width="200">
-  
-  
+  <img src="screenshot/splash.png" width="200" alt="Splash Screen"/>
+  <img src="screenshot/onboarding.png" width="200" alt="Onboarding Screen"/>
 </p>
+
+### Authentication
+
+<p align="center">
+  <img src="screenshot/login.png" width="200" alt="Login Screen"/>
+  <img src="screenshot/register.png" width="200" alt="Register Screen"/>
+</p>
+
+### Home & Search
+
+<p align="center">
+  <img src="screenshot/home.png" width="200" alt="Home Screen"/>
+  <img src="screenshot/search1.png" width="200" alt="Search Screen"/>
+  <img src="screenshot/search2.png" width="200" alt="Search Results"/>
+</p>
+
+### Book Details
+
+<p align="center">
+  <img src="screenshot/book%20details.png" width="200" alt="Book Details"/>
+  <img src="screenshot/book%20details2.png" width="200" alt="Book Details"/>
+</p>
+
+### Cart & Wishlist
+
+<p align="center">
+  <img src="screenshot/cart.png" width="200" alt="Shopping Cart"/>
+  <img src="screenshot/wishlist.png" width="200" alt="Wishlist"/>
+</p>
+
+### Profile
+
+<p align="center">
+  <img src="screenshot/profile.png" width="200" alt="Profile Screen"/>
+</p>
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
 ```bash
-dart run build_runner build --delete-conflicting-outputs 
+git clone https://github.com/habibamahmoud5/bookia_app.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd bookia_app
+```
+
+### 3. Install Dependencies
+
+```bash
+flutter pub get
+```
+
+### 4. Generate Required Files
+
+```bash
+dart run build_runner build --delete-conflicting-outputs
+```
+
+### 5. Run the Application
+
+```bash
+flutter run
+```
+
+## 👩‍💻 Developer
+
+**Habiba Mahmoud**
+
+GitHub: [@habibamahmoud5](https://github.com/habibamahmoud5)
+
+---
+
+<p align="center">
+  Made with ❤️ using Flutter
+</p>
