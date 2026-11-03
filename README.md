@@ -43,11 +43,7 @@ A modern **Flutter Book Store Application** that provides a smooth and user-frie
 ### Home & Search
 
 <p align="center">
-<<<<<<< HEAD
-  <img src="screenshot/home.png" width="200" alt="Home Screen"/>
-=======
   <img src="screenshot/Screenshot_1793723585.png" width="200" alt="Home Screen"/>
->>>>>>> 8869ea3 (Update readme)
   <img src="screenshot/search1.png" width="200" alt="Search Screen"/>
   <img src="screenshot/search2.png" width="200" alt="Search Results"/>
 </p>
@@ -72,21 +68,19 @@ A modern **Flutter Book Store Application** that provides a smooth and user-frie
   <img src="screenshot/profile.png" width="200" alt="Profile Screen"/>
 </p>
 
-</p>
 ```bash
-dart run build_runner build --delete-conflicting-outputs 
+git clone https://github.com/habibamahmoud5/bookia_app.git
+```
+
 
 ## 👩‍💻 Developer
 
 **Habiba Mahmoud**
 
 GitHub: [@habibamahmoud5](https://github.com/habibamahmoud5)
-<<<<<<< HEAD
 
 ---
 
 <p align="center">
   Made with ❤️ using Flutter
 </p>
-=======
->>>>>>> 8869ea3 (Update readme)
