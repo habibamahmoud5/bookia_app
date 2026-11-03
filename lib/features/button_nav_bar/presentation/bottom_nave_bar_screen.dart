@@ -92,7 +92,7 @@ class _BottomNaveBarScreenState extends State<BottomNaveBarScreen> {
                         BlendMode.srcIn,
                       ),
                     ),
-                    label: 'Saved',
+                    label: 'Wishlist',
                   ),
                   BottomNavigationBarItem(
                     icon: SvgPicture.asset(

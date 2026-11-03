@@ -21,7 +21,6 @@ class HomeCubit extends Cubit<HomeState> {
     try {
       final response = await HomeRepo.getBestSellerBooks();
 
-      // التأكد أن Cubit لم يتم إغلاقه
       if (isClosed) return;
 
       print('HOME: Repository response received');
@@ -77,7 +76,6 @@ class HomeCubit extends Cubit<HomeState> {
     try {
       final response = await HomeRepo.getSliders();
 
-      // التأكد أن Cubit لم يتم إغلاقه
       if (isClosed) return;
 
       if (response != null && response.data?.sliders != null) {

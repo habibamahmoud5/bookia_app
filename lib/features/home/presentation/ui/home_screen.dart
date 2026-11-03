@@ -6,6 +6,7 @@ import 'package:bookia_app/features/home/presentation/cubit/home_cubit.dart';
 import 'package:bookia_app/features/home/presentation/ui/widgets/book_card.dart';
 import 'package:bookia_app/features/home/presentation/ui/widgets/home_banner.dart';
 import 'package:bookia_app/features/home/presentation/ui/widgets/home_header.dart';
+import 'package:bookia_app/features/product_details/presentation/ui/product_details_screen.dart';
 import 'package:bookia_app/features/wishlist/presentation/cubit/cubit/wishlist_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -113,7 +114,23 @@ class HomeScreen extends StatelessWidget {
                               return BookCard(
                                 product: product,
                                 isFavorite: isFavorite,
+                                onTap: () {
+                                  final productId = product.id;
 
+                                  if (productId == null) return;
+
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => BlocProvider.value(
+                                        value: context.read<CartCubit>(),
+                                        child: ProductDetailsScreen(
+                                          productId: productId,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
                                 onBuy: () async {
                                   final productId = product.id;
                                   if (productId == null) return;
