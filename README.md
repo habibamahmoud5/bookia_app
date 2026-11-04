@@ -29,7 +29,7 @@ A modern **Flutter Book Store Application** that provides a smooth and user-frie
 ### Splash & Onboarding
 
 <p align="center">
-  <img src="screenshot/splash.png" width="200" alt="Splash Screen"/>
+  <img src="screenshot/splash screen.png" width="200" alt="Splash Screen"/>
   <img src="screenshot/onboarding.png" width="200" alt="Onboarding Screen"/>
 </p>
 
