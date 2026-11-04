@@ -55,10 +55,16 @@ A modern **Flutter Book Store Application** that provides a smooth and user-frie
   <img src="screenshot/book%20details2.png" width="200" alt="Book Details"/>
 </p>
 
-### Cart & Wishlist
+### Cart 
 
 <p align="center">
   <img src="screenshot/cart.png" width="200" alt="Shopping Cart"/>
+  <img src="screenshot/checkout.png" width="200" alt="checkout"/>
+  <img src="screenshot/success.png" width="200" alt="success"/>
+</p>
+
+### Wishlist
+<p align="center">
   <img src="screenshot/wishlist.png" width="200" alt="Wishlist"/>
 </p>
 
@@ -67,11 +73,6 @@ A modern **Flutter Book Store Application** that provides a smooth and user-frie
 <p align="center">
   <img src="screenshot/profile.png" width="200" alt="Profile Screen"/>
 </p>
-
-```bash
-git clone https://github.com/habibamahmoud5/bookia_app.git
-```
-
 
 ## 👩‍💻 Developer
 
@@ -84,3 +85,9 @@ GitHub: [@habibamahmoud5](https://github.com/habibamahmoud5)
 <p align="center">
   Made with ❤️ using Flutter
 </p>
+
+
+```bash
+git clone https://github.com/habibamahmoud5/bookia_app.git
+
+```

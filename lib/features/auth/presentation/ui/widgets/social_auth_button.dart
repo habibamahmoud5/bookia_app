@@ -44,9 +44,6 @@ class SocialAuthButton extends StatelessWidget {
               width: 24.w,
               height: 24.h,
               fit: BoxFit.contain,
-              // errorBuilder: (context, error, stackTrace) {
-              //   return const Icon(Icons.image_not_supported_outlined);
-              // },
             ),
             SizedBox(width: 8.w),
             Text(
