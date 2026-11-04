@@ -86,8 +86,3 @@ GitHub: [@habibamahmoud5](https://github.com/habibamahmoud5)
   Made with ❤️ using Flutter
 </p>
 
-
-```bash
-git clone https://github.com/habibamahmoud5/bookia_app.git
-
-```
