@@ -193,8 +193,63 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                       );
+                    } else if (state is GetBestSellerError) {
+                      return Center(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 30.w),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.wifi_off_rounded,
+                                size: 65.sp,
+                                color: Colors.grey,
+                              ),
+
+                              20.verticalSpace,
+
+                              Text(
+                                'Oops! Something went wrong',
+                                textAlign: TextAlign.center,
+                                style: AppTextStyles.dmRegular20.copyWith(
+                                  color: AppColors.black,
+                                ),
+                              ),
+
+                              10.verticalSpace,
+
+                              Text(
+                                state.message,
+                                textAlign: TextAlign.center,
+                                style: AppTextStyles.dmRegular14.copyWith(
+                                  color: AppColors.gray80,
+                                ),
+                              ),
+
+                              25.verticalSpace,
+
+                              ElevatedButton(
+                                onPressed: () {
+                                  context
+                                      .read<HomeCubit>()
+                                      .getBestSellerBooks();
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.gold,
+                                  foregroundColor: Colors.white,
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 35.w,
+                                    vertical: 12.h,
+                                  ),
+                                ),
+                                child: const Text('Try Again'),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
                     } else {
-                      return const Center(child: Text('Failed to load books'));
+                      return const SizedBox.shrink();
                     }
                   },
                 ),

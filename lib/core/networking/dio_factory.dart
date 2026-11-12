@@ -1,3 +1,4 @@
+import 'package:bookia_app/core/error/error_handler.dart';
 import 'package:bookia_app/core/networking/api_endpoints.dart';
 import 'package:bookia_app/core/services/locale/local_helper.dart';
 import 'package:bookia_app/core/utils/app_const.dart';
@@ -7,40 +8,6 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
   static Dio? dio;
-  // static inti() {
-  //   dio = Dio(
-  //     BaseOptions(
-  //       baseUrl: ApiEndpoints.baseUrl,
-  //       headers: {
-  //         "accept": "application/json",
-  //         "content-Type": "application/json",
-  //         "authorization":
-  //             "Bearer ${LocalHelper.prefs?.get(AppConst.userToken)}",
-  //       },
-  //     ),
-  //   );
-  //   dio?.interceptors.add(
-  //     PrettyDioLogger(
-  //       requestHeader: true,
-  //       requestBody: true,
-  //       responseBody: true,
-  //       responseHeader: false,
-  //       error: true,
-  //       compact: true,
-  //       maxWidth: 90,
-  //       enabled: kDebugMode,
-  //       filter: (options, args) {
-  //         // don't print requests with uris containing '/posts'
-  //         if (options.path.contains('/posts')) {
-  //           return false;
-  //         }
-  //         // don't print responses with unit8 list data
-  //         return !args.isResponse || !args.hasUint8ListData;
-  //       },
-  //     ),
-  //   );
-  // }
-
   static void inti() {
     dio = Dio(
       BaseOptions(
@@ -79,6 +46,27 @@ class DioFactory {
         compact: true,
         maxWidth: 90,
         enabled: kDebugMode,
+      ),
+    );
+
+    //error handling
+    dio!.interceptors.add(
+      InterceptorsWrapper(
+        onError: (error, handler) {
+          final appException = ErrorHandler.handleError(error);
+
+          debugPrint('API ERROR: ${appException.message}');
+
+          handler.reject(
+            DioException(
+              requestOptions: error.requestOptions,
+              response: error.response,
+              type: error.type,
+              error: appException,
+              message: appException.message,
+            ),
+          );
+        },
       ),
     );
   }

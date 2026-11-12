@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:bookia_app/core/error/exceptions.dart';
 import 'package:bookia_app/features/home/data/models/books_model.dart';
 import 'package:bookia_app/features/home/data/models/slider_model.dart';
 import 'package:bookia_app/features/home/repo/home_repo.dart';
@@ -10,6 +11,15 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
   SliderModels? sliderModels;
+
+  // Helper method to get error message
+  String getErrorMessage(Object error) {
+    if (error is Exceptions) {
+      return error.message;
+    }
+
+    return 'Something went wrong. Please try again.';
+  }
 
   Future<void> getBestSellerBooks() async {
     if (isClosed) return;
@@ -23,15 +33,11 @@ class HomeCubit extends Cubit<HomeState> {
 
       if (isClosed) return;
 
-      print('HOME: Repository response received');
-      print('HOME: Response type = ${response.runtimeType}');
-
-      if (response is BooksModel) {
-        print('HOME: Products count = ${response.data?.products?.length ?? 0}');
-
+      if (response != null) {
+        print('HOME: Products count: ${response.data?.products?.length ?? 0}');
         emit(GetBestSellerSuccess(response.data?.products));
       } else {
-        emit(GetBestSellerError());
+        emit(GetBestSellerError(message: 'No books found. Please try again.'));
       }
     } catch (e, stackTrace) {
       if (isClosed) return;
@@ -39,7 +45,7 @@ class HomeCubit extends Cubit<HomeState> {
       print('HOME ERROR: $e');
       print(stackTrace);
 
-      emit(GetBestSellerError());
+      emit(GetBestSellerError(message: getErrorMessage(e)));
     }
   }
 
@@ -56,7 +62,7 @@ class HomeCubit extends Cubit<HomeState> {
       if (data != null) {
         emit(SearchSuccess(data.whereType<Products>().toList()));
       } else {
-        emit(SearchError());
+        emit(SearchError(message: 'Search failed. Please try again.'));
       }
     } catch (e, stackTrace) {
       if (isClosed) return;
@@ -64,7 +70,7 @@ class HomeCubit extends Cubit<HomeState> {
       print('SEARCH ERROR: $e');
       print(stackTrace);
 
-      emit(SearchError());
+      emit(SearchError(message: getErrorMessage(e)));
     }
   }
 
@@ -85,7 +91,9 @@ class HomeCubit extends Cubit<HomeState> {
 
         emit(GetSlidersSuccess(response));
       } else {
-        emit(GetSlidersError());
+        emit(
+          GetSlidersError(message: 'Failed to load sliders. Please try again.'),
+        );
       }
     } catch (e, stackTrace) {
       if (isClosed) return;
@@ -93,7 +101,7 @@ class HomeCubit extends Cubit<HomeState> {
       print('SLIDERS ERROR: $e');
       print(stackTrace);
 
-      emit(GetSlidersError());
+      emit(GetSlidersError(message: getErrorMessage(e)));
     }
   }
 }
